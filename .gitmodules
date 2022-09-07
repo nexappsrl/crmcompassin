@@ -1,0 +1,4 @@
+[submodule "nexappsrl/crmcompassin"]
+	path = nexappsrl/crmcompassin
+	url = git@github.com:nexappsrl/crmcompassin.git
+	branch = main
