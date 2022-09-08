@@ -1,7 +1,9 @@
 <odoo>
-    <data>
-
-        
-
-    </data>
+    <data>    
+    <record model="ir.actions.act_window" id="na_linkdanea.action_window_base_data">
+            <field name="name">Odoo</field>
+            <field name="res_model">na_linkdanea.stats_base</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>    
 </odoo>
