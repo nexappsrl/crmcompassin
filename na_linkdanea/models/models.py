@@ -140,6 +140,10 @@ class extend_lead(models.Model):
             "{}_iddoc".format(ref):raw["keys"]["testata"].__str__().strip(),
             "{}_idrighe".format(ref):",".join(raw["keys"]["righe"]),
             "{}_numdoc".format(ref):raw["values"]["testata"]["NumDoc"],
-            "{}_descdoc".format(ref):raw["values"]["testata"]["DescDoc"],
-        }
+            "{}_descdoc".format(ref):raw["values"]["testata"]["DescDoc"]}
+        buffer["expected_revenue"]=raw["values"]["testata"]["TotNetto"]
+        if raw["values"]["testata"]["TipoDoc"]=="Q":
+            buffer["stage_id"]=3
+        elif raw["values"]["testata"]["TipoDoc"]=="C":
+            buffer["stage_id"]=4
         return buffer
