@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_linkdanea_root" name="Link Danea"  sequence="1"  web_icon="na_linkdanea, static/description/icon.png"/>
+   
+
+    <menuitem
+        id="menu_linkdanea_base_data"
+        name="Dati Raccolti"
+        action="na_linkdanea.action_window_base_data"
+        parent="menu_linkdanea_root"
+        sequence="10"/>
+</odoo>

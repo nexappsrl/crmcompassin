@@ -23,8 +23,9 @@
 
     # always loaded
     'data': [
-        #'security/linkdanea_security.xml',
-        #'security/ir.model.access.csv',
+        'security/linkdanea_security.xml',
+        'security/ir.model.access.csv',
+        'views/linkdanea_menu.xml',
         'views/product_views.xml',
         'views/views.xml',
     ],

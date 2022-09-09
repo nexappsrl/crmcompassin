@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
     <record id="module_na_linkdanea_category" model="ir.module.category">
-        <field name="name">Sync Danea</field>
+        <field name="name">Link Danea</field>
     </record>
     <record id="module_na_linkdanea_group_user" model="res.groups">
         <field name="name">User</field>

@@ -1,1 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_na_linkdanea_stats_base_user,na_linkdanea.stats_base,model_na_linkdanea_stats_base,module_na_linkdanea_group_user,1,0,0,0
+access_na_linkdanea_stats_base_manager,na_linkdanea.stats_base,model_na_linkdanea_stats_base,module_na_linkdanea_group_manager,1,1,1,1
