@@ -16,7 +16,7 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Productivity',
-    'version': '0.1',
+    'version': '0.9',
 
     # any module necessary for this one to work correctly
     'depends': ['base','crm','sale_management','stock'],
@@ -25,9 +25,10 @@
     'data': [
         'security/linkdanea_security.xml',
         'security/ir.model.access.csv',
-        'views/linkdanea_menu.xml',
         'views/product_views.xml',
+        'views/account_views.xml',
         'views/views.xml',
+        'views/linkdanea_menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

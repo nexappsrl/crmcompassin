@@ -1,9 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>            
-    <record model="ir.actions.act_window" id="na_linkdanea.action_window_base_data">
-            <field name="name">Odoo</field>
+    <data>
+        <record id="na_linkdanea.list_stats_base" model="ir.ui.view">
+            <field name="name">Statistiche da Danea</field>
+            <field name="model">na_linkdanea.stats_base</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero_doc" string="Seriale Fattura EasyFatt" />
+                    <field name="totale_fatturato" string="Totale fattura" />
+                    <field name="data_fattura" string="Data in Fattura" />
+                    <field name="vat" string="PIVA" />
+                    <field name="codice_prodotto" />
+                    <field name="qta" />
+                    <field name="imponibile" />
+                    <field name="categoria" />
+                    <field name="sottocategoria" />
+                    <field name="larghezza" />
+                    <field name="altezza" />
+                    <field name="write_date" string="Ultimo Aggiornamento" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="na_linkdanea.action_window_data_base_stats">
+            <field name="name">Statistiche Easyfatt</field>
             <field name="res_model">na_linkdanea.stats_base</field>
             <field name="view_mode">tree,form</field>
         </record>
-    </data>    
+    </data>
 </odoo>

@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <data>
 
-    <menuitem id="menu_linkdanea_root" name="Link Danea"  sequence="1"  web_icon="na_linkdanea,static/description/icon.png"/>   
 
-    <menuitem
-        id="menu_linkdanea_base_data"
-        name="Dati Raccolti"
-        action="na_linkdanea.action_window_base_data"
-        parent="menu_linkdanea_root"
-        sequence="10"/>
+        <menuitem id="menu_linkdanea_root" name="Statistiche Danea" sequence="1" />
+        <!-- web_icon="na_linkdanea,static/description/icon.png" /> -->
+        <menuitem id="menu_linkdanea_dataset" name="Dati Raccolti" sequence="10" parent="menu_linkdanea_root" action="na_linkdanea.action_window_data_base_stats" />
+
+
+    </data>
+
+
 </odoo>

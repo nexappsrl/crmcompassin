@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="move_form_linkdanea_view" model="ir.ui.view">
+            <field name="name">account.view.move.form.inherited</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page name="na_linkdanea_link_data" string="Easyfatt">
+                        <group>
+                            <group name="account_move" string="Riferimenti Fattura">
+                                <field name="na_linkdanea_iddoc" readonly="1" />
+                                <field name="na_linkdanea_totnetto" readonly="1"/>
+                                <field name="na_linkdanea_idrighe" readonly="1" />
+                                <field name="na_linkdanea_numdoc" readonly="1" />
+                                <field name="na_linkdanea_descdoc" readonly="1" />
+                                <field name="na_linkdanea_stats_ref" readonly="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="move_form_linkdanea_tree" model="ir.ui.view">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>            
+            <field name="arch" type="xml">
+                <field name="move_type" position="after">                    
+                    <field name="na_linkdanea_iddoc" readonly="1" />
+                    <field name="na_linkdanea_totnetto" readonly="1"/>
+                    <field name="na_linkdanea_idrighe" readonly="1" />
+                    <field name="na_linkdanea_numdoc" readonly="1" />
+                    <field name="na_linkdanea_descdoc" readonly="1" />
+                    <field name="na_linkdanea_stats_ref" readonly="1"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
