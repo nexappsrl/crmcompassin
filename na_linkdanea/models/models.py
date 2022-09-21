@@ -115,6 +115,36 @@ class stats_base(models.Model):
         if self.valuta is None:
             self.valuta = currency
 
+    def to_dict(self):
+        return dict(
+            ref_middle=self.ref_middle,
+            ref_available=self.ref_available,
+            ref_status=self.ref_status,
+            seriale_fattura=self.seriale_fattura,
+            tipo_doc=self.tipo_doc,
+            numero_doc=self.numero_doc,
+            data_fattura=self.data_fattura,
+            cliente_fatturazione=self.cliente_fatturazione,
+            vat=self.vat,
+            indirizzo_street=self.indirizzo_street,
+            indirizzo_street2=self.indirizzo_street2,
+            indirizzo_zip=self.indirizzo_zip,
+            indirizzo_city=self.indirizzo_city,
+            indirizzo_state_id=self.indirizzo_state_id.id,
+            indirizzo_country_id=self.indirizzo_country_id.id,
+            indirizzo_country_code=self.indirizzo_country_code,
+            codice_prodotto=self.codice_prodotto,
+            qta=self.qta,
+            categoria=self.categoria,
+            sottocategoria=self.sottocategoria,
+            larghezza=self.larghezza,
+            altezza=self.altezza,
+            imponibile=self.imponibile,
+            codice_imposta=self.codice_imposta,
+            valuta=self.valuta.id,
+            totale_fatturato=self.totale_fatturato,
+        )
+
 
 class extend_product(models.Model):
     _description = "Estende l'entità prodotto."
@@ -199,5 +229,5 @@ class extend_move(models.Model):
             "{}_totnetto".format(ref): raw["values"]["testata"]["TotNetto"],
         }
         buffer["invoice_date"] = raw["values"]["testata"]["Data"]
-        buffer["name"] ="FATT/EasyFatt/{}".format(raw["values"]["testata"]["NumDoc"])
+        buffer["name"] = "FATT/EasyFatt/{}".format(raw["values"]["testata"]["NumDoc"])
         return buffer
