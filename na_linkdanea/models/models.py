@@ -66,7 +66,9 @@ class stats_base(models.Model):
     indirizzo_country_code = fields.Char(
         related="indirizzo_country_id.code", string="Codice Nazione"
     )
+    nome_prodotto = fields.Text(string="Nome prodotto")
     codice_prodotto = fields.Text(string="Codice prodotto")
+    desc_prodotto = fields.Text(string="Descrizione prodotto")
     qta = fields.Text(string="Quantitá")
     categoria = fields.Text(string="Categoria")
     sottocategoria = fields.Text(string="Sottocategoria")
@@ -96,7 +98,7 @@ class stats_base(models.Model):
 
     def write(self, vals):
         res = super(stats_base, self).write(vals)
-        res.save_valuta(currency=self._get_valuta())
+        self.save_valuta(currency=self._get_valuta())
         return res
 
     def _get_valuta(self):
@@ -133,7 +135,9 @@ class stats_base(models.Model):
             indirizzo_state_id=self.indirizzo_state_id.id,
             indirizzo_country_id=self.indirizzo_country_id.id,
             indirizzo_country_code=self.indirizzo_country_code,
+            nome_prodotto=self.nome_prodotto,
             codice_prodotto=self.codice_prodotto,
+            desc_prodotto=self.desc_prodotto,
             qta=self.qta,
             categoria=self.categoria,
             sottocategoria=self.sottocategoria,

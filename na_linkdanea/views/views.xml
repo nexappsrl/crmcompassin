@@ -10,6 +10,7 @@
                     <field name="totale_fatturato" string="Totale fattura" />
                     <field name="data_fattura" string="Data in Fattura" />
                     <field name="vat" string="PIVA" />
+                    <field name="nome_prodotto" />
                     <field name="codice_prodotto" />
                     <field name="qta" />
                     <field name="imponibile" />
