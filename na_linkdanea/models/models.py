@@ -43,10 +43,10 @@ class stats_base(models.Model):
     )
     ref_status = fields.Text(string="Stato record", readonly=True, default="RDY")
     seriale_fattura = fields.Text(
-        string="seriale fattura", readonly=True, default="EMPTY"
+        string="seriale fattura", readonly=True, default="EMPTY",index=True
     )
-    tipo_doc = fields.Text(string="tipo_doc")
-    numero_doc = fields.Text(string="numero_doc")
+    tipo_doc = fields.Text(string="tipo_doc",index=True)
+    numero_doc = fields.Text(string="numero_doc",index=True)
     data_fattura = fields.Date(string="data_fattura")
     cliente_fatturazione = fields.Text(string="cliente_fatturazione")
     vat = fields.Text(string="Indirizzo Ragione Sociale")
@@ -183,10 +183,10 @@ class extend_lead(models.Model):
     _description = "Estende l'entità Lead."
     _inherit = "crm.lead"
 
-    na_linkdanea_iddoc = fields.Text(string="IDDoc")
-    na_linkdanea_idrighe = fields.Text(string="IDDocRighe")
-    na_linkdanea_numdoc = fields.Text(string="NumDoc")
-    na_linkdanea_descdoc = fields.Text(string="DescDoc")
+    na_linkdanea_iddoc = fields.Text(string="IDDoc",index=True)
+    na_linkdanea_idrighe = fields.Text(string="IDDocRighe",index=True)
+    na_linkdanea_numdoc = fields.Text(string="NumDoc",index=True)
+    na_linkdanea_descdoc = fields.Text(string="DescDoc",index=True)
 
     @classmethod
     def na_linkdanea_read_lead_detail(self, raw: dict) -> dict:
