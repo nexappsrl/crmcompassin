@@ -235,3 +235,17 @@ class extend_move(models.Model):
         buffer["invoice_date"] = raw["values"]["testata"]["Data"]
         buffer["name"] = "FATT/EasyFatt/{}".format(raw["values"]["testata"]["NumDoc"])
         return buffer
+
+
+class extend_partner(models.Model):
+    _description = "Estende l'entità partner"
+    _inherit = "res.partner"
+    na_linkdanea_codice_anagrafica=fields.Text(string="Codice Anagrafico")
+
+    @classmethod
+    def na_linkdanea_read_partner_detail(self,raw:dict):
+        ref="na_linkdanea"
+        buffer:dict={
+            "{}_codice_anagrafica".format(ref):raw.get("codanagr","Assente")
+        }
+        return buffer
