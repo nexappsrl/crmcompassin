@@ -240,7 +240,7 @@ class extend_move(models.Model):
 class extend_partner(models.Model):
     _description = "Estende l'entità partner"
     _inherit = "res.partner"
-    #na_linkdanea_codice_anagrafica=fields.Text(string="Codice Anagrafico")
+    na_linkdanea_codice_anagrafica=fields.Text(string="Codice Anagrafico")
 
     @classmethod
     def na_linkdanea_read_partner_detail(self,raw:dict):
