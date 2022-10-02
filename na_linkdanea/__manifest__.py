@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/product_views.xml',
         'views/account_views.xml',
+        'views/partner_views.xml',
         'views/views.xml',
         'views/linkdanea_menu.xml',
     ],

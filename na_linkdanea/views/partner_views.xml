@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<record id="na_linkdanea_product_form_view" model="product.template">
+        <field name="name">product.template.stock.tree.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="uom_id" position="after">
+        <field name="na_linkdanea_category"/>
+        <field name="na_linkdanea_subcategory"/>
+        <field name="na_linkdanea_width"/>
+        <field name="na_linkdanea_height"/>
+        </field>
+    </record>
+
+    <record id="na_linkdanea_product_template_tree" model="ir.ui.view">
+        <field name="name">product.template.na_linkdanea.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="detail_type" position="after">
+                <field name="na_linkdanea_category"/>
+                <field name="na_linkdanea_subcategory"/>
+                <field name="na_linkdanea_width"/>
+                <field name="na_linkdanea_height"/>
+            </field>
+        </field>
+    </record>
+-->
+
+        <!-- PARTNER VIEW -->
+
+        <record model="ir.ui.view" id="partner_template_tree_view">
+            <field name="name">res.partner.tree.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="display_name" position="after">
+                    <field name="na_linkdanea_codice_anagrafica"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="partner_template_kanban_linkdanea_view">
+            <field name="name">res.partner.kanban.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view" />
+            <field name="arch" type="xml">                
+                <xpath expr="//div[hasclass('oe_kanban_partner_categories')]" position="inside">                        
+                    <field name="na_linkdanea_codice_anagrafica" />                    
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_property_form" model="ir.ui.view">
+            <field name="name">res.partner.property.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <page name="sales_purchases" position="after">
+                    <page string="Easyfatt" name="na_linkdanea_link_data">
+                        <group>
+                            <group string="Dati diretti" name="raw_data">
+                                <field name="na_linkdanea_codice_anagrafica" />
+                            </group>
+                        </group>
+                    </page>
+                </page>                
+            </field>
+        </record>
+    </data>
+</odoo>
