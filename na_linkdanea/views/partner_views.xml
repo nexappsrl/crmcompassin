@@ -28,15 +28,26 @@
     </record>
 -->
 
+        <record id="na_linkdanea.list_partner_filter" model="ir.ui.view">
+            <field name="name">view.res.partner.filter.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="na_linkdanea_codice_anagrafica" />
+                </field>                
+            </field>
+        </record>
+
         <!-- PARTNER VIEW -->
 
         <record model="ir.ui.view" id="partner_template_tree_view">
             <field name="name">res.partner.tree.form.inherit</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="inherit_id" ref="base.view_partner_tree" />
             <field name="arch" type="xml">
                 <field name="display_name" position="after">
-                    <field name="na_linkdanea_codice_anagrafica"/>
+                    <field name="na_linkdanea_codice_anagrafica" />
                 </field>
             </field>
         </record>
@@ -45,9 +56,9 @@
             <field name="name">res.partner.kanban.inherit</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.res_partner_kanban_view" />
-            <field name="arch" type="xml">                
-                <xpath expr="//div[hasclass('oe_kanban_partner_categories')]" position="inside">                        
-                    <field name="na_linkdanea_codice_anagrafica" />                    
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_kanban_partner_categories')]" position="inside">
+                    <field name="na_linkdanea_codice_anagrafica" />
                 </xpath>
             </field>
         </record>
@@ -65,7 +76,7 @@
                             </group>
                         </group>
                     </page>
-                </page>                
+                </page>
             </field>
         </record>
     </data>
