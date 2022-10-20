@@ -2,3 +2,7 @@
 	path = nexappsrl/crmcompassin
 	url = git@github.com:nexappsrl/crmcompassin.git
 	branch = main
+[submodule "GitLab/na_linkdanea"]
+	path = GitLab/na_linkdanea
+	url = git@gitlab.com:nexapp-srl/odoo/na_linkdanea.git
+	branch = 15.0
