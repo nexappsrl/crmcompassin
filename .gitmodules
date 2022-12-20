@@ -2,3 +2,7 @@
 	path = GitLab/na_linkdanea
 	url = git@gitlab.com:nexapp-srl/odoo/na_linkdanea.git
 	branch = 15.0
+[submodule "nexappsrl/compassin"]
+	path = nexappsrl/compassin
+	url = git@gitlab.com:nexapp-srl/odoo/compassin.git
+	branch = dev
