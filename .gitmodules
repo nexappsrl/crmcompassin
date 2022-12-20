@@ -1,7 +1,7 @@
 [submodule "nexappsrl/crmcompassin"]
-	path = nexappsrl/compassin
+	path = nexappsrl/crmcompassin
 	url = git@github.com:nexappsrl/crmcompassin.git
-	branch = dev
+	branch = main
 [submodule "GitLab/na_linkdanea"]
 	path = GitLab/na_linkdanea
 	url = git@gitlab.com:nexapp-srl/odoo/na_linkdanea.git
